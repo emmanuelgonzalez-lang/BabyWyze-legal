@@ -1,0 +1,136 @@
+Privacy Policy for BabyWyze
+
+Last updated: 02/15/2026
+
+BabyWyze (“we,” “our,” or “us”) respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how BabyWyze collects, uses, and protects information when you use the BabyWyze mobile application (the “App”).
+
+By using BabyWyze, you agree to the collection and use of information in accordance with this Privacy Policy.
+
+⸻
+
+1. Information We Collect
+
+a. Information You Provide
+
+When you use BabyWyze, you may voluntarily provide information including, but not limited to:
+	•	Baby name or nickname
+	•	Date of birth
+	•	Feeding, diaper, sleep, growth, and milestone logs
+	•	Notes and journal entries
+	•	App settings and preferences
+
+This information is used solely to provide the app’s core features.
+
+⸻
+
+b. Automatically Collected Information
+
+We may collect limited technical information such as:
+	•	Device type and operating system
+	•	App usage and performance data
+	•	Crash logs and diagnostics
+
+This data helps us improve app stability and performance.
+
+⸻
+
+c. Advertising & Tracking (AdMob)
+
+BabyWyze uses Google AdMob to display advertisements.
+
+AdMob may collect:
+	•	Device identifiers (such as IDFA)
+	•	Usage data
+	•	Interaction data related to ads
+
+This information may be used to show personalized or non-personalized ads, depending on your consent.
+
+⸻
+
+2. App Tracking Transparency (ATT)
+
+BabyWyze follows Apple’s App Tracking Transparency framework.
+	•	You will be asked whether you allow tracking.
+	•	If you allow tracking, ads may be personalized.
+	•	If you do not allow tracking, only non-personalized ads will be shown.
+	•	You can change your choice at any time in:
+Settings → Privacy & Security → Tracking
+
+⸻
+
+3. How We Use Your Information
+
+We use collected information to:
+	•	Provide and maintain BabyWyze features
+	•	Display relevant ads
+	•	Improve app functionality and performance
+	•	Respond to support inquiries
+
+We do not sell your personal data.
+
+⸻
+
+4. AI Features
+
+BabyWyze includes an AI assistant designed to provide general informational guidance only.
+	•	The AI does not provide medical advice.
+	•	Responses should not be considered a substitute for professional medical guidance.
+	•	Always consult your pediatrician or healthcare provider for medical concerns.
+
+AI interactions may be processed to generate responses, but are not used to sell data.
+
+⸻
+
+5. Data Sharing
+
+We may share limited data with trusted third-party service providers only as necessary to operate the app, including:
+	•	Advertising providers (Google AdMob)
+	•	Analytics or crash reporting services (if enabled)
+
+All third parties are required to protect your information and comply with applicable privacy laws.
+
+⸻
+
+6. Children’s Privacy
+
+BabyWyze is designed for parents and caregivers, not children.
+	•	We do not knowingly collect personal information directly from children.
+	•	The app is not listed in Apple’s Kids Category.
+	•	All data is entered by adults on behalf of their child.
+
+⸻
+
+7. Data Security
+
+We use reasonable administrative and technical safeguards to protect your information, including:
+	•	Secure network connections (HTTPS)
+	•	Restricted access to stored data
+
+However, no method of transmission or storage is 100% secure.
+
+⸻
+
+8. Your Choices & Rights
+
+You may:
+	•	Review or delete your data within the app
+	•	Control ad tracking permissions in iOS settings
+	•	Stop using the app at any time
+
+If you have questions about your data, contact us using the information below.
+
+⸻
+
+9. Changes to This Privacy Policy
+
+We may update this Privacy Policy from time to time.
+Changes will be posted at this URL with an updated “Last updated” date.
+
+⸻
+
+10. Contact Us
+
+If you have questions or concerns about this Privacy Policy, contact us at:
+
+Email: support@waypointstudiollc.com
+App Name: BabyWyze
