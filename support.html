@@ -53,6 +53,31 @@ background:linear-gradient(135deg,var(--accent),var(--accent2));
 text-decoration:none;
 margin-top:10px;
 }
+
+    .topnav {
+      margin-top: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 38px;
+      padding: 0 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.05);
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .pill:hover {
+      text-decoration: none;
+      background: rgba(255,255,255,0.10);
+    }
+
 </style>
 </head>
 <body>
@@ -62,6 +87,12 @@ margin-top:10px;
 <div class="logo"></div>
 <h1>BabyWyze Support</h1>
 <p>Need help using BabyWyze? We're here to help parents and caregivers get the most out of the app.</p>
+<nav class="topnav" aria-label="Site navigation">
+  <a class="pill" href="index.html">Home</a>
+  <a class="pill" href="privacy.html">Privacy</a>
+  <a class="pill" href="terms.html">Terms</a>
+  <a class="pill" href="support.html">Support</a>
+</nav>
 
 <div class="card">
 <h2>Contact Support</h2>

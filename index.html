@@ -296,7 +296,32 @@
         justify-content: flex-start;
       }
     }
-  </style>
+  
+    .topnav {
+      margin-top: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 38px;
+      padding: 0 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.05);
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .pill:hover {
+      text-decoration: none;
+      background: rgba(255,255,255,0.10);
+    }
+
+</style>
 </head>
 <body>
   <header>
@@ -306,6 +331,7 @@
         <span>BabyWyze</span>
       </a>
       <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">Home</a>
         <a href="#features">Features</a>
         <a href="#why">Why BabyWyze</a>
         <a href="#faq">FAQ</a>
@@ -486,6 +512,7 @@
       <div class="card">
         <strong>Quick Links</strong>
         <div class="footer-links">
+          <a href="index.html">Home</a>
           <a href="privacy.html">Privacy Policy</a>
           <a href="terms.html">Terms of Use</a>
           <a href="support.html">Support</a>
