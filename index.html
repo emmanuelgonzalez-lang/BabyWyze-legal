@@ -80,7 +80,7 @@
     }
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
       gap: 28px;
       align-items: center;
     }
@@ -237,26 +237,44 @@
 
     .stats {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
+      grid-template-columns: repeat(2, minmax(220px, 1fr));
+      gap: 16px;
       margin-top: 16px;
     }
     .stat {
-      text-align: center;
-      padding: 18px 14px;
+      text-align: left;
+      padding: 20px 18px;
       border-radius: 18px;
       background: rgba(255,255,255,0.05);
       border: 1px solid rgba(255,255,255,0.10);
+      min-height: 110px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
     .stat strong {
       display: block;
-      font-size: 1.5rem;
-      margin-bottom: 4px;
-      letter-spacing: -0.03em;
+      font-size: 1.25rem;
+      margin-bottom: 6px;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      white-space: normal;
+      overflow-wrap: anywhere;
     }
     .stat span {
       color: var(--muted);
-      font-size: 0.94rem;
+      font-size: 0.97rem;
+      line-height: 1.45;
+      white-space: normal;
+      overflow-wrap: anywhere;
+    }
+    @media (max-width: 720px) {
+      .stats {
+        grid-template-columns: 1fr;
+      }
+      .stat {
+        min-height: 96px;
+      }
     }
 
     .footer {
@@ -340,6 +358,92 @@
       border: 1px solid rgba(255,255,255,0.18);
     }
 
+    .carousel-shell {
+      position: relative;
+      margin-top: 8px;
+    }
+    .carousel-viewport {
+      overflow: hidden;
+      border-radius: 24px;
+    }
+    .carousel-track {
+      display: flex;
+      transition: transform 0.45s ease;
+      will-change: transform;
+      touch-action: pan-y;
+    }
+    .carousel-slide {
+      min-width: 100%;
+      box-sizing: border-box;
+      padding: 6px;
+    }
+    .preview-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 24px;
+      padding: 14px;
+      box-shadow: 0 12px 30px var(--shadow);
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .preview-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .preview-card h3 {
+      margin: 14px 0 6px;
+      font-size: 1.08rem;
+      letter-spacing: -0.02em;
+    }
+    .preview-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.97rem;
+    }
+    .carousel-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .carousel-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.06);
+      color: var(--text);
+      font-size: 1.25rem;
+      cursor: pointer;
+    }
+    .carousel-btn:hover {
+      background: rgba(255,255,255,0.12);
+    }
+    .carousel-dots {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      flex: 1;
+    }
+    .carousel-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      border: none;
+      background: rgba(255,255,255,0.22);
+      cursor: pointer;
+      padding: 0;
+    }
+    .carousel-dot.active {
+      background: #ffffff;
+      transform: scale(1.15);
+    }
+
   </style>
 </head>
 <body>
@@ -395,33 +499,59 @@
           </div>
         </div>
 
-        <div class="phone-card">
-          <div class="phone">
-            <div class="screen-top">
-              <span>Today Dashboard</span>
-              <span>BabyWyze</span>
+        
+        
+        <div class="card">
+          <div class="section-head" style="margin-bottom: 18px;">
+            <h2 style="font-size: 1.8rem; margin-bottom: 8px;">See BabyWyze in action</h2>
+            <p>Swipe through key parts of the app, including daily tracking, quick logs, recent activity, and growth charts.</p>
+          </div>
+
+          <div class="carousel-shell" id="appCarousel">
+            <div class="carousel-viewport">
+              <div class="carousel-track">
+                <div class="carousel-slide">
+                  <div class="preview-card">
+                    <img src="Screenshot 2026-03-08 at 4.42.11 PM.png" alt="BabyWyze Today screen preview">
+                    <h3>Today dashboard</h3>
+                    <p>View feeds, diapers, sleep, and quick insights in one clean summary.</p>
+                  </div>
+                </div>
+                <div class="carousel-slide">
+                  <div class="preview-card">
+                    <img src="Screenshot 2026-03-08 at 4.42.34 PM.png" alt="BabyWyze Log activity screen preview">
+                    <h3>Quick logging</h3>
+                    <p>Capture feeding, diaper, sleep, and supplement activity in seconds.</p>
+                  </div>
+                </div>
+                <div class="carousel-slide">
+                  <div class="preview-card">
+                    <img src="Screenshot 2026-03-08 at 10.04.37 PM.png" alt="BabyWyze Growth tracking screen preview">
+                    <h3>Growth tracking</h3>
+                    <p>Track weight, length, and head circumference with current stats and trends.</p>
+                  </div>
+                </div>
+                <div class="carousel-slide">
+                  <div class="preview-card">
+                    <img src="Screenshot 2026-03-08 at 10.05.10 PM.png" alt="BabyWyze WHO percentile chart screen preview">
+                    <h3>WHO percentiles</h3>
+                    <p>Review percentile charts and growth progress with visual benchmarks over time.</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="screen-card">
-              <strong>Feeding Progress</strong>
-              <span class="mini">6 feedings logged today</span>
-              <div class="progress"><span></span></div>
-            </div>
-            <div class="screen-card">
-              <strong>Sleep Summary</strong>
-              <span class="mini">Total sleep today: 11h 20m</span>
-            </div>
-            <div class="screen-card">
-              <strong>Recent Activity</strong>
-              <span class="mini">Bottle · Diaper · Nap · Growth entry</span>
-            </div>
-            <div class="screen-card">
-              <strong>Helpful Insights</strong>
-              <span class="mini">Simple trends to help you understand routines over time</span>
+
+            <div class="carousel-controls">
+              <button class="carousel-btn" id="carouselPrev" aria-label="Previous slide">‹</button>
+              <div class="carousel-dots" id="carouselDots" aria-label="Carousel pagination"></div>
+              <button class="carousel-btn" id="carouselNext" aria-label="Next slide">›</button>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+
 
     <section id="features">
       <div class="wrap">
@@ -541,5 +671,112 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      const root = document.getElementById('appCarousel');
+      if (!root) return;
+
+      const track = root.querySelector('.carousel-track');
+      const slides = Array.from(root.querySelectorAll('.carousel-slide'));
+      const prevBtn = document.getElementById('carouselPrev');
+      const nextBtn = document.getElementById('carouselNext');
+      const dotsWrap = document.getElementById('carouselDots');
+
+      let index = 0;
+      let startX = 0;
+      let currentX = 0;
+      let isDragging = false;
+      let autoTimer = null;
+      const intervalMs = 3500;
+
+      function buildDots() {
+        slides.forEach((_, i) => {
+          const dot = document.createElement('button');
+          dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+          dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+          dot.addEventListener('click', () => {
+            index = i;
+            update();
+            restartAuto();
+          });
+          dotsWrap.appendChild(dot);
+        });
+      }
+
+      function update() {
+        track.style.transform = 'translateX(' + (-index * 100) + '%)';
+        const dots = Array.from(dotsWrap.children);
+        dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+      }
+
+      function next() {
+        index = (index + 1) % slides.length;
+        update();
+      }
+
+      function prev() {
+        index = (index - 1 + slides.length) % slides.length;
+        update();
+      }
+
+      function startAuto() {
+        stopAuto();
+        autoTimer = setInterval(next, intervalMs);
+      }
+
+      function stopAuto() {
+        if (autoTimer) clearInterval(autoTimer);
+        autoTimer = null;
+      }
+
+      function restartAuto() {
+        startAuto();
+      }
+
+      prevBtn.addEventListener('click', () => {
+        prev();
+        restartAuto();
+      });
+
+      nextBtn.addEventListener('click', () => {
+        next();
+        restartAuto();
+      });
+
+      track.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        currentX = startX;
+        isDragging = true;
+        stopAuto();
+      }, { passive: true });
+
+      track.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        currentX = e.touches[0].clientX;
+      }, { passive: true });
+
+      track.addEventListener('touchend', () => {
+        if (!isDragging) return;
+        const delta = currentX - startX;
+        if (Math.abs(delta) > 50) {
+          if (delta < 0) next();
+          else prev();
+        } else {
+          update();
+        }
+        isDragging = false;
+        restartAuto();
+      });
+
+      root.addEventListener('mouseenter', stopAuto);
+      root.addEventListener('mouseleave', startAuto);
+
+      buildDots();
+      update();
+      startAuto();
+    })();
+  </script>
+
 </body>
 </html>
