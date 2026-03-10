@@ -1,1 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BabyWyze Password Reset</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #fff;
+      background:
+        radial-gradient(900px 500px at 15% 0%, rgba(255,92,138,0.25), transparent 60%),
+        radial-gradient(900px 500px at 85% 0%, rgba(90,166,255,0.22), transparent 60%),
+        #0b1220;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      box-sizing: border-box;
+    }
 
+    .card {
+      max-width: 560px;
+      width: 100%;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 24px;
+      padding: 28px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: 2rem;
+    }
+
+    p {
+      color: rgba(255,255,255,0.88);
+      line-height: 1.6;
+    }
+
+    .token {
+      margin-top: 16px;
+      padding: 12px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.08);
+      word-break: break-all;
+      font-size: 0.95rem;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 12px 18px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #ff5c8a, #5aa6ff);
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .small {
+      margin-top: 16px;
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.72);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Reset your BabyWyze password</h1>
+    <p>If BabyWyze is installed, return to the app to continue resetting your password.</p>
+    <p>Your reset token is shown below in case you need to paste it manually.</p>
+
+    <div class="token" id="tokenBox">Loading token...</div>
+
+    <a href="babywyze://reset-password" class="button">Open BabyWyze</a>
+
+    <p class="small">
+      If the app does not open automatically, copy the token above and paste it into the reset screen in the app.
+    </p>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const token = params.get("token");
+    document.getElementById("tokenBox").textContent = token || "No token found in link.";
+  </script>
+</body>
+</html>
