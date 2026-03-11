@@ -3,11 +3,14 @@
     "apps": [],
     "details": [
       {
-        "appID": "YOURTEAMID.YOUR_BUNDLE_ID",
+        "appID": "F54LXTH553.com.waypointstudiollc.BabyWise",
         "paths": [
           "/babywyze/reset-password",
           "/babywyze/reset-password*",
-          "/babywyze/reset-password/"
+          "/babywyze/reset-password/",
+          "/babywyze/invite",
+          "/babywyze/invite*",
+          "/babywyze/invite/"
         ]
       }
     ]
