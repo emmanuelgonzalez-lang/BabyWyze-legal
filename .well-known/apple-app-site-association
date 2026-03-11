@@ -3,10 +3,11 @@
     "apps": [],
     "details": [
       {
-        "appID": "F54LXTH553.com.waypointstudiollc.BabyWise",
+        "appID": "YOURTEAMID.YOUR_BUNDLE_ID",
         "paths": [
           "/babywyze/reset-password",
-          "/babywyze/reset-password*"
+          "/babywyze/reset-password*",
+          "/babywyze/reset-password/"
         ]
       }
     ]
